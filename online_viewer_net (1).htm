@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Alencar Veloso</title>
+    <!-- Carrega o Tailwind CSS para design rápido e responsivo --><script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Configurações de cores personalizadas e fonte */
+        :root {
+            --color-primary: #0A1931; /* Azul Marinho Profundo */
+            --color-secondary: #C5C6C7; /* Cinza Claro */
+            --color-text: #1F2937; /* Cinza Escuro para texto */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            background-color: #052449; /* Fundo azul marinho profundo */
+            background-image: none;
+        }
+
+        /* 1. Animação de entrada dinâmica para a logo (Fade-in e Slide-up) */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Começa um pouco mais para baixo */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Aplica a animação, mantendo o elemento invisível inicialmente */
+        .animate-logo-entry {
+            opacity: 0; 
+            /* Aumentei a duração para 1.5s e o delay para 0.5s para um efeito mais dramático */
+            animation: fadeInUp 1.5s ease-out 0.5s forwards; 
+        }
+
+        /* 2. Classe para o efeito de hover sutil nos logos (não alterada) */
+        .partner-logo {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 3. Estilos da Logo Principal (TAMANHO AUMENTADO AQUI) */
+        .main-logo {
+            max-width: 350px; /* Aumentado de 300px para mobile */
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        @media (min-width: 768px) { /* Para telas maiores que mobile */
+            .main-logo {
+                max-width: 480px; /* Aumentado de 400px para desktop */
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased flex flex-col items-center justify-center p-4">
+
+    <!-- Container Principal Centrado (Largura ajustada para 7xl) --><div class="logo-overlay w-full max-w-7xl mx-auto p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl bg-white/90 backdrop-blur-sm">
+
+        <!-- Seção de Título Principal --><header class="text-center mb-16">
+            <!-- LOGO PRINCIPAL: Usando o link fornecido do Imgur, agora maior e com animação aprimorada --><img src="https://i.imgur.com/n5vgmLm.jpeg" alt="Grupo Alencar Veloso Logo" class="main-logo mb-6 animate-logo-entry" onerror="this.onerror=null; this.src='https://placehold.co/400x150/0A1931/ffffff?text=LOGO+GRUPO+AV';"> 
+            
+            <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto" style="color: var(--color-text);">
+                Sua porta de entrada para um ecossistema de soluções estratégicas e inovadoras.
+            </p>
+            <p class="mt-2 text-md text-gray-500">
+                Liderança, Parceria e Crescimento.
+            </p>
+        </header>
+
+        <!-- Seção de Nossos Parceiros Estratégicos --><section class="mt-16 pt-8 border-t border-gray-200">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10" style="color: var(--color-primary);">
+                Nossos Parceiros Estratégicos
+            </h2>
+
+            <!-- Grid Responsivo Ajustado para 5 Logos (2 no Mobile, 3 no Tablet, 5 no Desktop) --><div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+
+                <!-- Parceiro 1 - DESTAQUE: Fundo Verde Escuro e Padding Aumentado (p-8) --><a href="#" class="partner-logo flex flex-col items-center p-8 bg-green-800 rounded-xl border border-green-900">
+                    <!-- LOGO PARCEIRO 1: Usando o link fornecido do Imgur --><img src="https://i.imgur.com/ZytpQOB.png" 
+                         alt="Logo da Empresa Parceira 1"
+                         class="w-full h-auto object-contain rounded-md"
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+1';">
+                </a>
+
+                <!-- Parceiro 2 - Fundo Branco --><a href="#" class="partner-logo flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100">
+                    <!-- LOGO PARCEIRO 2: Usando o link fornecido do Imgur --><img src="https://i.imgur.com/dRwjmel.jpeg"
+                         alt="Logo da Empresa Parceira 2"
+                         class="w-full h-auto object-contain rounded-md"
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+2';">
+                </a>
+
+                <!-- Parceiro 3 - Fundo PRETO --><a href="#" class="partner-logo flex flex-col items-center p-6 bg-black rounded-xl border border-gray-700">
+                    <!-- LOGO PARCEIRO 3: Usando o link fornecido do Imgur --><img src="https://i.imgur.com/tJtWLPq.png"
+                         alt="Logo da Empresa Parceira 3"
+                         class="w-full h-auto object-contain rounded-md"
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+3';">
+                </a>
+
+                <!-- Parceiro 4 - Fundo Branco --><a href="#" class="partner-logo flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100">
+                    <!-- LOGO PARCEIRO 4: URL atualizada --><img src="https://i.imgur.com/62vXE9E.jpeg"
+                         alt="Logo da Empresa Parceira 4"
+                         class="w-full h-auto object-contain rounded-md"
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+4';">
+                </a>
+
+                <!-- Parceiro 5 - NOVO PARCEIRO --><a href="#" class="partner-logo flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100">
+                    <!-- LOGO PARCEIRO 5: Usando o link fornecido do Imgur --><img src="https://i.imgur.com/sxXoSNZ.jpeg"
+                         alt="Logo da Empresa Parceira 5"
+                         class="w-full h-auto object-contain rounded-md"
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+5';">
+                </a>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-500 italic text-sm">
+                
+                    <br>
+                    
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção Principal: Nossos Serviços (AGORA SOMENTE COM O BOTÃO) -->
+        <section class="mt-20 pt-12 border-t border-gray-200">
+            
+            <!-- Botão Fale Conosco e Saiba Mais -->
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-8 py-3 bg-[#0A1931] text-white font-semibold rounded-full shadow-md hover:bg-[#1f375f] transition duration-300 text-lg md:text-xl">
+                    Fale Conosco e Saiba Mais
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Simples - Cor ajustada para o novo fundo escuro --><footer class="mt-8 text-center text-gray-300 text-sm">
+        &copy; 2025 Grupo Alencar Veloso. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
