@@ -1,176 +1,159 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo Alencar Veloso</title>
-    <!-- Carrega o Tailwind CSS para design rápido e responsivo --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configura a fonte Inter --><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Configurações de cores personalizadas e fonte */
-        :root {
-            --color-primary: #0A1931; /* Azul Marinho Profundo */
-            --color-secondary: #C5C6C7; /* Cinza Claro */
-            --color-text: #1F2937; /* Cinza Escuro para texto */
-        }
+        /* Estilos CSS básicos para dar uma aparência */
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--color-text);
-            background-color: #052449; /* Fundo azul marinho profundo (Cor do Cliente) */
-            background-image: none;
-            /* Adiciona rolagem suave ao clicar em âncoras (href="#id") */
-            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        /* 1. Animação de entrada dinâmica para a logo (Fade-in e Slide-up) */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px); /* Começa um pouco mais para baixo */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Aplica a animação, mantendo o elemento invisível inicialmente */
-        .animate-logo-entry {
-            opacity: 0; 
-            animation: fadeInUp 1.5s ease-out 0.5s forwards; 
+        header {
+            background-color: #004d99; /* Um azul escuro para o cabeçalho */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
 
-        /* 2. Classe para o efeito de hover sutil nos logos */
-        .partner-logo {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            cursor: pointer;
+        h1 {
+            margin: 0;
         }
-        .partner-logo:hover {
-            transform: translateY(-5px);
-            /* Sombra mais intensa no hover */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
         }
-        
-        /* 3. Estilos da Logo Principal */
-        .main-logo {
-            max-width: 350px; /* Mobile */
-            height: auto;
-            margin: 0 auto;
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #004d99;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .colaboradores-lista {
+            list-style: none;
+            padding: 0;
+        }
+
+        .colaboradores-lista li {
+            background-color: #e6f0ff; /* Fundo mais claro para os itens */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid #004d99;
+            border-radius: 4px;
+        }
+
+        .contato form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .contato label {
+            font-weight: bold;
             display: block;
-        }
-        @media (min-width: 768px) { /* Desktop */
-            .main-logo {
-                max-width: 480px; 
-            }
-        }
-        /* Cor de fundo para o container dos parceiros */
-        .partner-bg-dark {
-            background-color: #052449;
+            margin-bottom: 5px;
         }
 
-        /* Novo estilo para as imagens dos parceiros */
-        .partner-img {
-            max-width: 100%; /* Garante que a imagem não exceda a largura do seu contêiner */
-            height: auto; /* Permite que a altura se ajuste automaticamente */
-            object-fit: contain; /* Redimensiona a imagem para caber dentro do elemento, mantendo a proporção */
-            padding: 5px; /* Adiciona um pequeno padding interno para que a logo não "grude" nas bordas do cartão */
+        .contato input[type="text"],
+        .contato input[type="email"],
+        .contato textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+        }
+
+        .contato button {
+            background-color: #008cba; /* Azul ciano para o botão */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contato button:hover {
+            background-color: #005f7d;
         }
     </style>
 </head>
-<body class="min-h-screen antialiased flex flex-col items-center justify-center p-4">
+<body>
 
-    <!-- Container Principal Centrado e com Fundo Semi-Transparente --><div class="logo-overlay w-full max-w-7xl mx-auto p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl bg-white/90 backdrop-blur-sm">
+    <header>
+        <h1>GRUPO ALENCAR VELOSO</h1>
+        <p>Soluções e Parcerias Estratégicas</p>
+    </header>
 
-        <!-- Seção de Título Principal --><header class="text-center mb-10">
-            <!-- LOGO PRINCIPAL --><img src="https://i.imgur.com/n5vgmLm.jpeg" alt="Grupo Alencar Veloso Logo" class="main-logo mb-6 animate-logo-entry" onerror="this.onerror=null; this.src='https://placehold.co/400x150/0A1931/ffffff?text=LOGO+GRUPO+AV';"> 
+    <main>
+        
+        <section class="colaboradores">
+            <h2>Nossos Colaboradores</h2>
+            <p>Conheça os membros essenciais que fazem o Grupo Alencar Veloso crescer.</p>
             
-            <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto" style="color: var(--color-text);">
-                Sua porta de entrada para um ecossistema de soluções estratégicas e inovadoras.
-            </p>
-            <p class="mt-2 text-md text-gray-500">
-                Liderança, Parceria e Crescimento.
-            </p>
-        </header>
-
-        <!-- Botão Principal de Contato --><div class="text-center mb-16">
-            <a href="#contato" class="inline-block px-10 py-3 bg-[#0A1931] text-white font-semibold rounded-full shadow-xl hover:bg-[#1f375f] transition duration-300 transform hover:scale-105 text-lg md:text-xl">
-                Fale Conosco e Saiba Mais
-            </a>
-        </div>
-
-        <!-- Seção de Nossos Parceiros Estratégicos --><section class="mt-16 pt-8 border-t border-gray-200">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10" style="color: var(--color-primary);">
-                Nossos Parceiros Estratégicos
-            </h2>
-
-            <!-- Grid Responsivo Ajustado para 5 Logos (2 no Mobile, 3 no Tablet, 5 no Desktop) --><div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
-
-                <!-- Parceiro 1 - FUNDO ESCURO APLICADO --><a href="javascript:void(0)" class="partner-logo flex flex-col items-center justify-center p-6 partner-bg-dark rounded-xl border border-gray-700 shadow-xl">
-                    <img src="https://i.imgur.com/ZytpQOB.png" 
-                         alt="Logo da Empresa Parceira 1"
-                         class="partner-img"
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+1';">
-                </a>
-
-                <!-- Parceiro 2 - FUNDO ESCURO APLICADO --><a href="javascript:void(0)" class="partner-logo flex flex-col items-center justify-center p-6 partner-bg-dark rounded-xl border border-gray-700 shadow-xl">
-                    <img src="https://i.imgur.com/dRwjmel.jpeg"
-                         alt="Logo da Empresa Parceira 2"
-                         class="partner-img"
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+2';">
-                </a>
-
-                <!-- Parceiro 3 - FUNDO ESCURO APLICADO --><a href="javascript:void(0)" class="partner-logo flex flex-col items-center justify-center p-6 partner-bg-dark rounded-xl border border-gray-700 shadow-xl">
-                    <img src="https://i.imgur.com/tJtWLPq.png"
-                         alt="Logo da Empresa Parceira 3"
-                         class="partner-img"
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+3';">
-                </a>
-
-                <!-- Parceiro 4 - FUNDO ESCURO APLICADO --><a href="javascript:void(0)" class="partner-logo flex flex-col items-center justify-center p-6 partner-bg-dark rounded-xl border border-gray-700 shadow-xl">
-                    <img src="https://i.imgur.com/62vXE9E.jpeg"
-                         alt="Logo da Empresa Parceira 4"
-                         class="partner-img"
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+4';">
-                </a>
-
-                <!-- Parceiro 5 - FUNDO ESCURO APLICADO --><a href="javascript:void(0)" class="partner-logo flex flex-col items-center justify-center p-6 partner-bg-dark rounded-xl border border-gray-700 shadow-xl">
-                    <img src="https://i.imgur.com/sxXoSNZ.jpeg"
-                         alt="Logo da Empresa Parceira 5"
-                         class="partner-img"
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x80/CCCCCC/000000?text=Logo+5';">
-                </a>
-
-            </div>
+            <ul class="colaboradores-lista">
+                <li>**João da Silva:** Gerente de Projetos - Responsável pela coordenação de novas iniciativas.</li>
+                <li>**Maria Souza:** Analista Financeira Sênior - Especialista em planejamento e controle orçamentário.</li>
+                <li>**Pedro Oliveira:** Desenvolvedor Web Full Stack - Cuida da infraestrutura e desenvolvimento digital.</li>
+                </ul>
+            
+            <p>Para informações sobre vagas, entre em contato pela área abaixo.</p>
         </section>
 
-        <!-- NOVA SEÇÃO: Informações de Contato (Âncora de destino do botão) --><section id="contato" class="mt-20 pt-12 border-t border-gray-200">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8" style="color: var(--color-primary);">
-                Fale Conosco
-            </h2>
-            <div class="text-center space-y-6">
+        <section class="contato">
+            <h2>Fale Conosco</h2>
+            <p>Entre em contato para dúvidas, propostas de parceria ou informações sobre nossos serviços.</p>
+
+            <form action="#" method="POST">
                 
-                <!-- Email Contact com Ícone --><p class="text-lg md:text-xl font-medium flex items-center justify-center" style="color: var(--color-text);">
-                    <!-- Ícone de Email (Lucide Mail) --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-3 text-gray-500">
-                        <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.83 1.83 0 0 1-2.06 0L2 7"/>
-                    </svg>
-                    <span class="font-bold mr-2">Email:</span> 
-                    <a href="mailto:Residuosambientalltda@gmail.com" class="text-[#0A1931] hover:text-[#1f375f] transition duration-200 underline">Residuosambientalltda@gmail.com</a>
-                </p>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
                 
-                <!-- Telefone Contact com Ícone --><p class="text-lg md:text-xl font-medium flex items-center justify-center" style="color: var(--color-text);">
-                    <!-- Ícone de Telefone (Lucide Phone) --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-3 text-gray-500">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3 10.19a2 2 0 0 1 2-2h3"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3 10.19a2 2 0 0 1 2-2h3"/>
-                    </svg>
-                    <span class="font-bold mr-2">Telefone:</span> 
-                    <a href="tel:+558688615356" class="text-[#0A1931] hover:text-[#1f375f] transition duration-200 underline">+55 86 8861-5356</a>
-                </p>
-            </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto">
+                </div>
+                
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Enviar Mensagem</button>
+
+            </form>
+            
+            <p style="margin-top: 20px;">Ou entre em contato diretamente: Telefone: (99) 9999-9999 | Email: contato@grupoalencarveloso.com.br</p>
+
         </section>
 
-    </div>
-
-    <!-- Footer Simples --><footer class="mt-8 text-center text-gray-300 text-sm">
-        &copy; 2025 Grupo Alencar Veloso. Todos os direitos reservados.
-    </footer>
+    </main>
 
 </body>
 </html>
